@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Bribo Innovation Hub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html"><img src="assets/logo.png" alt="Bribo Logo" class="logo"/></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <h2>Support Local Innovation</h2>
+      <p>M-PESA Paybill: <strong>981300</strong><br>Account: <strong>108611</strong></p>
+
+      <h2>Visit Us</h2>
+      <iframe src="https://maps.google.com/maps?q=Nairobi&z=15&output=embed" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <!-- WhatsApp Plugin -->
+  <script>
+    (function () {
+      var options = {
+        whatsapp: "+254712345678",
+        call_to_action: "Chat with us!",
+        position: "right"
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+  </script>
+</body>
+</html>
