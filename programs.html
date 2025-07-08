@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Programs | Bribo Innovation Hub</title>
+  <meta charset="UTF-8">
+  <title>Programs | Bribo</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .filter-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .filter-buttons button {
+      padding: 10px 15px;
+      background-color: #444;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .filter-buttons button.active {
+      background-color: orange;
+      color: black;
+    }
+
+    .program {
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 600px;
+      border: 1px solid #333;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      display: none; /* Hide all by default, JS will control display */
+    }
+
+    .program.visible {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html"><img src="assets/Bribo logo.png" alt="Bribo Logo" class="logo"/></a>
+      <a href="index.html"><img src="assets/Bribo logo.png" class="logo" alt="Bribo Logo" /></a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -22,45 +57,59 @@
   </header>
 
   <main>
-    <section>
-      <h1>Programs</h1>
-      <div class="filter-buttons">
-        <button>All</button>
-        <button>Youth</button>
-        <button>Women</button>
-        <button>Entrepreneurs</button>
+    <section class="filter-buttons">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="youth">Youth</button>
+      <button data-filter="women">Women</button>
+      <button data-filter="entrepreneurs">Entrepreneurs</button>
+    </section>
+
+    <section id="program-list">
+
+      <div class="program youth visible">
+        <h3>AI for Grassroots</h3>
+        <p>6-week mobile-friendly AI intro course.</p>
       </div>
 
-      <div class="program-list">
-        <div class="program">
-          <h3>AI for Grassroots</h3>
-          <p>6-week mobile-friendly AI intro course.</p>
-        </div>
-        <div class="program">
-          <h3>Idea Generation Course Launch</h3>
-          <p>Sat, 15 Mar – Virtual</p>
-        </div>
-        <div class="program">
-          <h3>Estel Children Home Visit</h3>
-          <p>Sat, 23 Nov – Nairobi</p>
-        </div>
-        <div class="program">
-          <h3>Innovate for Sustainability Conference</h3>
-          <p>Sun, 8 Sept – Bribo Hub</p>
-        </div>
+      <div class="program youth visible">
+        <h3>Idea Generation Course Launch</h3>
+        <p>Sat, 15 Mar – Virtual</p>
       </div>
 
-      <section class="signup-form">
-        <h2>Sign Up for a Program</h2>
-        <form action="https://formspree.io/f/Bribohub.com" method="POST">
-         <input type="text" name="name" placeholder="Your Name" required />
-         <input type="email" name="email" placeholder="Your Email" required />
-         <textarea name="message" placeholder="Your Message" required></textarea>
-         <button type="submit">Send</button>
-        </form>
+      <div class="program women visible">
+        <h3>Estel Children Home Visit</h3>
+        <p>Sat, 23 Nov – Nairobi</p>
+      </div>
 
-      </section>
+      <div class="program entrepreneurs visible">
+        <h3>Innovate for Sustainability Conference</h3>
+        <p>Sun, 8 Sept – Bribo Hub</p>
+      </div>
+
     </section>
   </main>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-buttons button");
+    const programs = document.querySelectorAll(".program");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove "active" from all buttons
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.getAttribute("data-filter");
+
+        programs.forEach(program => {
+          if (filter === "all") {
+            program.classList.add("visible");
+          } else {
+            program.classList.toggle("visible", program.classList.contains(filter));
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
