@@ -50,7 +50,11 @@ nav {
   color: black;
   padding: 10px 20px;
   border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
 }
+
 
 .service-grid, .program-list {
   display: flex;
@@ -64,6 +68,14 @@ nav {
   background-color: #1c1c1c;
   padding: 20px;
   border-radius: 8px;
+  color: #fff; /* ✅ makes all text inside white */
+  text-decoration: none; /* ✅ prevents underlines on links */
+}
+
+/* Optional: ensure heading and paragraph inside card are white */
+.card h3,
+.card p {
+  color: #fff;
 }
 
 .card i {
@@ -140,3 +152,73 @@ footer {
   transform: translateY(0);
 }
 
+.impact-overview {
+  background-color: #181818;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.impact-overview h2 {
+  color: orange;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.impact-intro {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.impact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.impact-card {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1 1 250px;
+  max-width: 280px;
+  border-top: 4px solid #4caf50; /* green highlight */
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+}
+
+.impact-card i {
+  font-size: 2rem;
+  color: #a78bfa; /* purple icon */
+  margin-bottom: 10px;
+}
+
+.impact-number {
+  font-size: 2.5rem;
+  color: orange;
+  margin: 10px 0;
+}
+
+.impact-card p {
+  color: #eee;
+  font-weight: bold;
+}
+
+.impact-cta {
+  margin-top: 40px;
+}
+
+.cta-btn.purple {
+  background-color: #6c5ce7;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+}
