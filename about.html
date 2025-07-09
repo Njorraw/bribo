@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | Bribo Innovation Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Bribo Innovation Hub</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="assets/Bribo favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-<body class="dark-theme">
+<body>
+
   <header>
     <nav>
-      <a href="index.html"><img src="assets/Bribo logo.png" alt="Bribo Logo" class="logo"/></a>
+      <a href="index.html"><img src="assets/Bribo logo.png" alt="Bribo Logo" class="logo" /></a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
@@ -22,35 +24,61 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>About Bribo</h1>
-      <p>INNOVATION FOR SUSTAINABILITY</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="hero-text">
+      <h1 class="orange">About Bribo</h1>
+      <p class="subheading">INNOVATION FOR SUSTAINABILITY</p>
+    </div>
+  </section>
 
-    <section class="about">
-      <h2>Our Vision</h2>
-      <p>To be the center that provides solutions to the problems of the community.</p>
+  <!-- Our Story -->
+  <section class="story-section">
+    <h2 class="section-title orange">Our Story</h2>
+    <p>
+      Bribo started <span class="highlight">2 years ago</span> with limited resources but big dreams to uplift the community
+      through <span class="highlight">innovation</span>, <span class="highlight">mentorship</span>, and sustainable development.
+      Today, we’ve impacted <span class="highlight">hundreds of youth</span> and launched
+      <span class="highlight">dozens of community startups</span>.
+    </p>
+  </section>
 
-      <h2>Our Mission</h2>
-      <p>To provide quality skills and idea generation expertise to the community of the world in motion to foster sustainability in the society using local available material resources; and transition from cottage to world-class ventures and industries.</p>
+  <!-- Vision & Mission -->
+  <section class="vision-mission-section">
+    <h2 class="section-title orange">Our Vision & Mission</h2>
+    <div class="vm-grid">
+      <div class="vm-block">
+        <i class="fas fa-eye vm-icon"></i>
+        <h3>Our Vision</h3>
+        <p>To be the center that provides solutions to the problems of the community.</p>
+      </div>
+      <div class="vm-block">
+        <i class="fas fa-bullseye vm-icon"></i>
+        <h3>Our Mission</h3>
+        <p>
+          To provide quality skills and idea generation expertise to the community of the world in motion
+          to foster sustainability using locally available material resources; and to transition from cottage
+          to world-class ventures and industries.
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <h2>Our Story</h2>
-      <p>Bribo started 2 years ago with limited resources but big dreams to uplift the community through innovation, mentorship, and sustainable development. Today, we’ve impacted hundreds of youth and launched dozens of community startups.</p>
-
-      <h2>Our Values</h2>
-      <ul>
-        <li>Community</li>
-        <li>Sustainability</li>
-        <li>Empowerment</li>
-        <li>Innovation</li>
-        <li>Local Solutions</li>
-      </ul>
-    </section>
-  </main>
+  <!-- Our Values -->
+  <section class="values-section">
+    <h2 class="section-title orange">Our Values</h2>
+    <div class="values-grid">
+      <div class="value-card"><i class="fas fa-users"></i><p>Community</p></div>
+      <div class="value-card"><i class="fas fa-leaf"></i><p>Sustainability</p></div>
+      <div class="value-card"><i class="fas fa-hands-helping"></i><p>Empowerment</p></div>
+      <div class="value-card"><i class="fas fa-lightbulb"></i><p>Innovation</p></div>
+      <div class="value-card"><i class="fas fa-map-marker-alt"></i><p>Local Solutions</p></div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Bribo Innovation Hub</p>
   </footer>
+
 </body>
 </html>
